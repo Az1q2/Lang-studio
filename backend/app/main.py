@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-
+from backend.app.config import settings
 app = FastAPI(
-    title="Lang_studio",
-    description="Local platform for language learning via video, manga, and reading",
-    version="0.1.0",
+    title=settings.APP_TITLE,
+    description=settings.APP_DESCRIPTION,
+    version=settings.APP_VERSION,
 )
 
 @app.get("/api/health")
